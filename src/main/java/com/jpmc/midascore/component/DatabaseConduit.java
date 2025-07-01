@@ -1,19 +1,38 @@
+// package com.jpmc.midascore.component;
+
+// import com.jpmc.midascore.entity.UserRecord;
+// import com.jpmc.midascore.repository.UserRecordRepository;
+// import org.springframework.stereotype.Component;
+
+// @Component
+// public class DatabaseConduit {
+//     private final UserRecordRepository userRepository;
+
+//     public DatabaseConduit(UserRecordRepository userRepository) {
+//         this.userRepository = userRepository;
+//     }
+
+//     public void save(UserRecord userRecord) {
+//         userRepository.save(userRecord);
+//     }
+
+
+// }
 package com.jpmc.midascore.component;
 
 import com.jpmc.midascore.entity.UserRecord;
-import com.jpmc.midascore.repository.UserRepository;
+import com.jpmc.midascore.repository.UserRecordRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DatabaseConduit {
-    private final UserRepository userRepository;
+    private final UserRecordRepository userRepository;
 
-    public DatabaseConduit(UserRepository userRepository) {
+    public DatabaseConduit(UserRecordRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     public void save(UserRecord userRecord) {
         userRepository.save(userRecord);
     }
-
 }
